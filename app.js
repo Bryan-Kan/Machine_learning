@@ -11,7 +11,7 @@ function dados() {
 
     for(let i=0; i<ds.length; i++) {
         if(tg == ds[i].tag) {
-            
+
             console.log(ds[i].tag + ds[i].flk);
 
             const achou = ds[i].flk;
@@ -26,5 +26,5 @@ function dados() {
 
         }
     }
-    
+
 }
