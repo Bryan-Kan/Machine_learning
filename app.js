@@ -27,4 +27,26 @@ function dados() {
         }
     }
 
+    function equacaoDaReta(x, y) {
+        // Defina os valores dos coeficientes a e b
+        // Aqui, vou usar valores arbitrários apenas para fins de exemplo
+        const a = 2; // coeficiente angular
+        const b = 3; // coeficiente linear
+    
+        // Calcule o valor de y usando a equação da reta (y = ax + b)
+        const resultadoY = a * x + b;
+    
+        // Verifique se o resultado calculado é igual ao valor real de y
+        if (resultadoY === y) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    // Teste a função com alguns valores de x e y
+    console.log(equacaoDaReta(1, 5)); // Deve retornar true se (1, 5) pertence à reta
+    console.log(equacaoDaReta(2, 7)); // Deve retornar true se (2, 7) pertence à reta
+    console.log(equacaoDaReta(3, 10)); // Deve retornar false se (3, 10) não pertence à reta    
+
 }
