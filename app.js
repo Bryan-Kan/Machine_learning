@@ -9,9 +9,13 @@ function dados() {
 
     let aparelho = document.getElementById("entrada").value;
 
+    let cont = 0;
+
     for (let i = 0; i < iphone.length; i++) {
 
         if (aparelho == iphone[i].tag) {
+
+            cont =+ 1;
 
             const qtdAparelho = iphone[i].qtd;
 
@@ -36,6 +40,10 @@ function dados() {
 
         }
 
-    }     
+    }
+
+    if(cont == 0){
+        alert("Não possui dados", "")
+    }
 
 }
