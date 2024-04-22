@@ -1,31 +1,37 @@
 function dados() {
-    // const ds = [
-    //     {tag: "laranja",flk: 33},
-    //     {tag: "banana",flk: 24},
-    //     {tag: "melão",flk: 20},
-    //     {tag: "morango",flk: 18},
-    //     {tag: "manga",flk: 13}
-    // ]
+    const iphone = [
+        {tag: "Iphone 15",qtd: 33},
+        {tag: "Iphone 14",qtd: 24},
+        {tag: "Iphone 13",qtd: 20},
+        {tag: "Iphone 12",qtd: 18},
+        {tag: "Iphone 11",qtd: 13}
+    ]
 
-    // let tg = document.getElementById("entrada").value;
+    let aparelho = document.getElementById("entrada").value;
 
-    // for(let i=0; i<ds.length; i++) {
-    //     if(tg == ds[i].tag) {
+    for (let i = 0; i < iphone.length; i++) {
 
-    //         console.log(ds[i].tag + ds[i].flk);
+        if (aparelho == iphone[i].tag) {
 
-    //         const achou = ds[i].flk;
+            const qtdAparelho = iphone[i].qtd;
 
-    //         if(achou == ds[0].flk) {
-    //             console.log("Excelente");
-    //         } else if(achou == ds[1].flk) {
-    //             console.log("Bom");
-    //         } else if(achou == ds[2].flk) {
-    //             console.log("Razoável");
-    //         }
+            if(qtdAparelho == iphone[0].qtd) {
+                console.log("Excelente");
+                alert("Classificação", "Excelente")Excelente
+            } else if(qtdAparelho == iphone[1].qtd) {
+                console.log("Bom");
+            } else if(qtdAparelho == iphone[2].qtd) {
+                console.log("Razoável");
+            }else if(qtdAparelho == iphone[3].qtd) {
+                console.log("Ruim");
+            }else if(qtdAparelho == iphone[4].qtd) {
+                console.log("Péssimo");
+            }
 
-    //     }
-    // }
+            return `y = ${i}x + ${i}`;
+        }
+
+    }
 
     // function equacaoDaReta(x, y) {
     //     // Defina os valores dos coeficientes a e b
@@ -47,32 +53,6 @@ function dados() {
     // // Teste a função com alguns valores de x e y
     // console.log(equacaoDaReta(1, 5)); // Deve retornar true se (1, 5) pertence à reta
     // console.log(equacaoDaReta(2, 7)); // Deve retornar true se (2, 7) pertence à reta
-    // console.log(equacaoDaReta(3, 10)); // Deve retornar false se (3, 10) não pertence à reta    
-
-
-    function equacaoDaReta(inputTexto, arrayDeTexto) {
-        // Verifica se o inputTexto está presente no arrayDeTexto
-        for (let i = 0; i < arrayDeTexto.length; i++) {
-            if (inputTexto === arrayDeTexto[i]) {
-                // Se houver uma correspondência, retorna a equação da reta
-                return `y = ${i}x + ${i}`;
-            }
-        }
-        // Se nenhum elemento corresponder, retorna null
-        return null;
-    }
-    
-    // Exemplo de uso:
-    const inputUsuario = "texto"; // Aqui você pode obter o texto do input do usuário
-    const arrayDados = ["texto1", "texto2", "texto3"]; // Seus dados de texto no array
-    
-    // Chamando a função e exibindo o resultado
-    const equacao = equacaoDaReta(inputUsuario, arrayDados);
-    if (equacao !== null) {
-        console.log("Equação da reta:", equacao);
-    } else {
-        console.log("Texto não encontrado no array.");
-    }
-    
+    // console.log(equacaoDaReta(3, 10)); // Deve retornar false se (3, 10) não pertence à reta       
 
 }
