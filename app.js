@@ -17,42 +17,25 @@ function dados() {
 
             if(qtdAparelho == iphone[0].qtd) {
                 console.log("Excelente");
-                alert("Classificação", "Excelente")Excelente
+                alert("Excelente", "")
             } else if(qtdAparelho == iphone[1].qtd) {
                 console.log("Bom");
+                alert("Bom", "")
             } else if(qtdAparelho == iphone[2].qtd) {
                 console.log("Razoável");
+                alert("Razoável", "")
             }else if(qtdAparelho == iphone[3].qtd) {
                 console.log("Ruim");
+                alert("Ruim", "")
             }else if(qtdAparelho == iphone[4].qtd) {
                 console.log("Péssimo");
+                alert("Péssimo", "")
+            }else {
+                alert("Não avaliado", "")
             }
 
-            return `y = ${i}x + ${i}`;
         }
 
-    }
-
-    // function equacaoDaReta(x, y) {
-    //     // Defina os valores dos coeficientes a e b
-    //     // Aqui, vou usar valores arbitrários apenas para fins de exemplo
-    //     const a = 2; // coeficiente angular
-    //     const b = 3; // coeficiente linear
-    
-    //     // Calcule o valor de y usando a equação da reta (y = ax + b)
-    //     const resultadoY = a * x + b;
-    
-    //     // Verifique se o resultado calculado é igual ao valor real de y
-    //     if (resultadoY === y) {
-    //         return true;
-    //     } else {
-    //         return false;
-    //     }
-    // }
-    
-    // // Teste a função com alguns valores de x e y
-    // console.log(equacaoDaReta(1, 5)); // Deve retornar true se (1, 5) pertence à reta
-    // console.log(equacaoDaReta(2, 7)); // Deve retornar true se (2, 7) pertence à reta
-    // console.log(equacaoDaReta(3, 10)); // Deve retornar false se (3, 10) não pertence à reta       
+    }     
 
 }
