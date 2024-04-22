@@ -17,26 +17,23 @@ function dados() {
 
             let x = qtdAparelho/iphone[0].qtd
 
-            if(x <= 1 && x >= 0,90) {
+            if(x <= 1 && x > 0,90) {
                 console.log("Excelente");
                 alert("Excelente", "")
-            } 
-            // else if(qtdAparelho == iphone[1].qtd) {
-            //     console.log("Bom");
-            //     alert("Bom", "")
-            // } else if(qtdAparelho == iphone[2].qtd) {
-            //     console.log("Razoável");
-            //     alert("Razoável", "")
-            // }else if(qtdAparelho == iphone[3].qtd) {
-            //     console.log("Ruim");
-            //     alert("Ruim", "")
-            // }else if(qtdAparelho == iphone[4].qtd) {
-            //     console.log("Péssimo");
-            //     alert("Péssimo", "")
-            // }
+            }else if(x <= 0,90 && x > 0,70) {
+                console.log("Bom");
+                alert("Bom", "")
+            } else if(x <= 0,70 && x > 0,50) {
+                console.log("Razoável");
+                alert("Razoável", "")
+            }else if(x <= 0,50 && x > 0,25) {
+                console.log("Ruim");
+                alert("Ruim", "")
+            }else if(x <= 0,25 && x >= 0) {
+                console.log("Péssimo");
+                alert("Péssimo", "")
+            }
 
-        }else{
-            alert("Não avaliado", "")
         }
 
     }     
