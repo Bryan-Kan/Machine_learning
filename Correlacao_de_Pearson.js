@@ -8,7 +8,7 @@ function dados() {
     let xy = null;
     let y2 = null;
 
-    if(genero1.length < genero1.length){
+    if(genero1.length < genero2.length){
         dadop = genero1;
         dadog = genero2;
     }else{
@@ -24,7 +24,18 @@ function dados() {
 
     }
 
-    const correlacao = xy / (dadop.length*y2)
+    console.log(xy);
+    console.log(y2);
+
+    const pre = dadop.length*y2
+
+    console.log(pre);
+
+    const correlacao = xy / pre
+
+    console.log(dadop.length);
+
+    console.log(correlacao);
 
     alert("Correlação de pop com art pop", correlacao)
 
