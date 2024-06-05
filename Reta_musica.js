@@ -1,4 +1,4 @@
-function dados() {
+function dados(data) {
 
     let musica = document.getElementById("entrada").value;
 
