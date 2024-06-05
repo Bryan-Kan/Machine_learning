@@ -4,52 +4,58 @@ function dados() {
 
     let cont = 0;
 
+    let soma = null;
+
+    let popularidade = null;
+
     for (let i = 0; i < data.length; i++) {
 
         if (musica == data[i].Title) {
 
             cont =+ 1;
 
-            const popularidade = data[i].Popularidade;
-            console.log('popularidade: ' + popularidade);
-
-            let x = popularidade/100
-            console.log('x: ' + x);
-
-            let alert_message = "Esta música foi classificada como: ";
-
-            switch (true) {
-                case (x <= 1 && x > 0.90):
-                    alert_message += "Excelente";
-                break;
-
-                case (x <= 0.90 && x > 0.70):
-                    alert_message += "Bom";
-                break;
-
-                case (x <= 0.70 && x > 0.50):
-                    alert_message += "Razoável";
-                break;
-
-                case (x <= 0.50 && x > 0.25):
-                    alert_message += "Ruim";
-                break;
-
-                case (x <= 0.25 && x >= 0):
-                    alert_message += "Péssimo";
-                break;
-
-                default:
-                    alert_message += "Desconhecido";
-                break;
-
-            }
-
-            alert(alert_message);
+            popularidade = data[i].Popularidade;
 
         }
 
+        soma += data[i].Popularidade;
+
     }
+
+    const media = soma / data.length;
+
+    let x = popularidade/media
+
+    let alert_message = "Esta música foi classificada como: ";
+
+    switch (true) {
+        case (x <= 1 && x > 0.90):
+            alert_message += "Excelente";
+        break;
+
+        case (x <= 0.90 && x > 0.70):
+            alert_message += "Bom";
+        break;
+
+        case (x <= 0.70 && x > 0.50):
+            alert_message += "Razoável";
+        break;
+
+        case (x <= 0.50 && x > 0.25):
+            alert_message += "Ruim";
+        break;
+
+        case (x <= 0.25 && x >= 0):
+            alert_message += "Péssimo";
+        break;
+
+        default:
+            alert_message += "Desconhecido";
+        break;
+
+    }
+
+    alert(alert_message);
 
 }
 
