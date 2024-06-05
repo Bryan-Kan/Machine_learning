@@ -1,7 +1,20 @@
-function pearson() {
+function pearson(data) {
 
-    const genero1 = art_pop;
-    const genero2 = pop;
+    const genero1 = pop;
+    const genero2 = null;
+
+    switch (data) {
+        case value:
+
+            genero2 = art_pop;
+            
+        break;
+    
+        default:
+            console.log("sem tempo irmão")
+        break;
+    }
+    
 
     let dadop = null;
     let dadog = null;
