@@ -1,18 +1,32 @@
-function dados(pop, genero2) {
+function dados() {
 
-    let musica = document.getElementById("entrada").value;
+    const genero1 = art_pop;
+    const genero2 = pop;
 
-    let cont = 0;
+    let dadop = null;
+    let dadog = null;
+    let xy = null;
+    let y2 = null;
 
-    for (let i = 0; i < pop.length; i++) {
+    if(genero1.length < genero1.length){
+        dadop = genero1;
+        dadog = genero2;
+    }else{
+        dadop = genero2;
+        dadog = genero1;
+    }
 
+    for (let i = 0; i < dadop.length; i++) {
 
+        xy += dadop[i]['popularidade'] * dadog[i]['popularidade']
+
+        y2 += dadog[i]['popularidade'] * dadog[i]['popularidade']
 
     }
 
-    if(cont == 0){
-        alert("Não possui dados", "")
-    }
+    const correlacao = xy / (dadop.length*y2)
+
+    alert("Correlação de pop com art pop", correlacao)
 
 }
 
