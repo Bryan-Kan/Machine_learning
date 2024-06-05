@@ -1,4 +1,4 @@
-function dados() {
+function pearson() {
 
     const genero1 = art_pop;
     const genero2 = pop;
@@ -1733,6 +1733,7 @@ const electropop = [
      "popularidade": 65
     }
 ]
+
 const pop = [
     {
      "Genero": "pop",
