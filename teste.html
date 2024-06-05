@@ -3,49 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Correlação de Músicas</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="Reta_musica.js"></script>
     <script src="Correlacao_de_Pearson.js"></script>
 </head>
 <body>
-    <div>
-        <br>
-        <label for="entrada">Coloque o Nome da musica Para ver se a Popularidade esta Boa</label>
-        <br>
-        <input type="text" name="entrada" id="entrada" placeholder="Entre com sua tag">
+    <div class="container">
+        <h1>Correlação de Músicas</h1>
+        <label for="entrada">Coloque o Nome da Música Para Verificar sua Popularidade:</label>
+        <input type="text" name="entrada" id="entrada" placeholder="Digite o nome da música">
         <button type="submit" onclick="dados()">Comparar</button>
-        <br>
-        <br>
-        Escolha dois generos para ser feita a correlação de Pearson
-        <br>
-        <br>
-        <label for="genero">Escolha o genero X:</label>
-        <select id="genero" name="genero">
-            <option value="art_pop">Art POP</option>
-            <option value="atl_hip_hop">Atl Hip Hop</option>
-            <option value="australian_pop">Australian POP</option>
-            <option value="big_room">Big Room</option>
-            <option value="boy_band">Boy Band</option>
-            <option value="canadian_pop">Canadian POP</option>
-            <option value="dance_pop">Dance POP</option>
-            <option value="electropop">Electro POP</option>
-            <option value="pop">POP</option>
-        </select>
-        <br>
-        <label for="genero2">Escolha o genero Y:</label>
-        <select id="genero2" name="genero2">
-            <option value="art_pop">Art POP</option>
-            <option value="atl_hip_hop">Atl Hip Hop</option>
-            <option value="australian_pop">Australian POP</option>
-            <option value="big_room">Big Room</option>
-            <option value="boy_band">Boy Band</option>
-            <option value="canadian_pop">Canadian POP</option>
-            <option value="dance_pop">Dance POP</option>
-            <option value="electropop">Electro POP</option>
-            <option value="pop">POP</option>
-        </select>
-        <br>
-        <button type="submit" onclick="pearson('genero', 'genero2')">Correlação</button>
+        
+        <div class="correlacao-section">
+            <h2>Correlação de Gêneros Musicais</h2>
+            <label for="genero">Escolha o gênero X:</label>
+            <select id="genero" name="genero">
+                <option value="art_pop">Art POP</option>
+                <option value="atl_hip_hop">Atl Hip Hop</option>
+                <option value="australian_pop">Australian POP</option>
+                <option value="big_room">Big Room</option>
+                <option value="boy_band">Boy Band</option>
+                <option value="canadian_pop">Canadian POP</option>
+                <option value="dance_pop">Dance POP</option>
+                <option value="electropop">Electro POP</option>
+                <option value="pop">POP</option>
+            </select>
+            <label for="genero2">Escolha o gênero Y:</label>
+            <select id="genero2" name="genero2">
+                <option value="art_pop">Art POP</option>
+                <option value="atl_hip_hop">Atl Hip Hop</option>
+                <option value="australian_pop">Australian POP</option>
+                <option value="big_room">Big Room</option>
+                <option value="boy_band">Boy Band</option>
+                <option value="canadian_pop">Canadian POP</option>
+                <option value="dance_pop">Dance POP</option>
+                <option value="electropop">Electro POP</option>
+                <option value="pop">POP</option>
+            </select>
+            <button type="submit" onclick="pearson('genero', 'genero2')">Calcular Correlação</button>
+        </div>
     </div>
 </body> 
 </html>

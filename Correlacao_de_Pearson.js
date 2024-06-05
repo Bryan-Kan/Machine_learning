@@ -5,9 +5,6 @@ function pearson(data, data2) {
     let genero1 = null;
     let genero2 = null;
 
-    console.log(id);
-    console.log(id2);
-
     switch (id) {
 
         case "art_pop":
@@ -129,9 +126,6 @@ function pearson(data, data2) {
             console.log("sem tempo irmão")
         break;
     }
-    
-    console.log(genero1);
-    console.log(genero2);
 
     let dadop = null;
     let xy = null;
@@ -151,18 +145,9 @@ function pearson(data, data2) {
 
     }
 
-    console.log(xy);
-    console.log(y2);
-
     const pre = dadop.length*y2
 
-    console.log(pre);
-
     const correlacao = xy / pre
-
-    console.log(dadop.length);
-
-    console.log(correlacao);
 
     alert("Correlação de "+ id + " com " + id2 + ": " + correlacao.toFixed(2))
 

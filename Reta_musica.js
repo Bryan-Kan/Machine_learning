@@ -16,29 +16,39 @@ function dados() {
             let x = popularidade/100
             console.log('x: ' + x);
 
-            if(x <= 1 && x > 0.90) {
-                console.log("Excelente");
-                alert("Excelente", "")
-            }else if(x <= 0.90 && x > 0.70) {
-                console.log("Bom");
-                alert("Bom", "")
-            } else if(x <= 0.70 && x > 0.50) {
-                console.log("Razoável");
-                alert("Razoável", "")
-            }else if(x <= 0.50 && x > 0.25) {
-                console.log("Ruim");
-                alert("Ruim", "")
-            }else if(x <= 0.25 && x >= 0) {
-                console.log("Péssimo");
-                alert("Péssimo", "")
+            let alert_message = "Esta música foi classificada como: ";
+
+            switch (true) {
+                case (x <= 1 && x > 0.90):
+                    alert_message += "Excelente";
+                break;
+
+                case (x <= 0.90 && x > 0.70):
+                    alert_message += "Bom";
+                break;
+
+                case (x <= 0.70 && x > 0.50):
+                    alert_message += "Razoável";
+                break;
+
+                case (x <= 0.50 && x > 0.25):
+                    alert_message += "Ruim";
+                break;
+
+                case (x <= 0.25 && x >= 0):
+                    alert_message += "Péssimo";
+                break;
+
+                default:
+                    alert_message += "Desconhecido";
+                break;
+
             }
+
+            alert(alert_message);
 
         }
 
-    }
-
-    if(cont == 0){
-        alert("Não possui dados", "")
     }
 
 }
