@@ -10,20 +10,42 @@
 <body>
     <div>
         <br>
-        <label for="musica">Coloque o Nome da musica Para ver se a Popularidade esta Boa</label>
+        <label for="entrada">Coloque o Nome da musica Para ver se a Popularidade esta Boa</label>
         <br>
-        <input type="text" name="musica" id="entrada" placeholder="Entre com sua tag">
+        <input type="text" name="entrada" id="entrada" placeholder="Entre com sua tag">
         <button type="submit" onclick="dados()">Comparar</button>
         <br>
-        Escolha um genero para ser feita a correlação de Pearson com o genero POP
         <br>
-        <label for="genero">Escolha o genero:</label>
+        Escolha dois generos para ser feita a correlação de Pearson
+        <br>
+        <br>
+        <label for="genero">Escolha o genero X:</label>
         <select id="genero" name="genero">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="fiat">Fiat</option>
-            <option value="audi">Audi</option>
+            <option value="art_pop">Art POP</option>
+            <option value="atl_hip_hop">Atl Hip Hop</option>
+            <option value="australian_pop">Australian POP</option>
+            <option value="big_room">Big Room</option>
+            <option value="boy_band">Boy Band</option>
+            <option value="canadian_pop">Canadian POP</option>
+            <option value="dance_pop">Dance POP</option>
+            <option value="electropop">Electro POP</option>
+            <option value="pop">POP</option>
         </select>
+        <br>
+        <label for="genero2">Escolha o genero Y:</label>
+        <select id="genero2" name="genero2">
+            <option value="art_pop">Art POP</option>
+            <option value="atl_hip_hop">Atl Hip Hop</option>
+            <option value="australian_pop">Australian POP</option>
+            <option value="big_room">Big Room</option>
+            <option value="boy_band">Boy Band</option>
+            <option value="canadian_pop">Canadian POP</option>
+            <option value="dance_pop">Dance POP</option>
+            <option value="electropop">Electro POP</option>
+            <option value="pop">POP</option>
+        </select>
+        <br>
+        <button type="submit" onclick="pearson('genero', 'genero2')">Correlação</button>
     </div>
 </body> 
 </html>

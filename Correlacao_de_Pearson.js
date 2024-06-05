@@ -1,12 +1,127 @@
-function pearson(data) {
+function pearson(data, data2) {
 
-    const genero1 = pop;
-    const genero2 = null;
+    const id = document.getElementById(data).value;
+    const id2 = document.getElementById(data2).value;
+    let genero1 = null;
+    let genero2 = null;
 
-    switch (data) {
-        case value:
+    console.log(id);
+    console.log(id2);
+
+    switch (id) {
+
+        case "art_pop":
+
+            genero1 = art_pop;
+            
+        break;
+
+        case "atl_hip_hop":
+
+            genero1 = atl_hip_hop;
+            
+        break;
+
+        case "australian_pop":
+
+            genero1 = australian_pop;
+            
+        break;
+
+        case "big_room":
+
+            genero1 = big_room;
+            
+        break;
+
+        case "boy_band":
+
+            genero1 = boy_band;
+            
+        break;
+
+        case "canadian_pop":
+
+            genero1 = canadian_pop;
+            
+        break;
+
+        case "dance_pop":
+
+            genero1 = dance_pop;
+            
+        break;
+
+        case "electropop":
+
+            genero1 = electropop;
+            
+        break;
+
+        case "pop":
+
+            genero1 = pop;
+            
+        break;
+    
+        default:
+            console.log("sem tempo irmão")
+        break;
+    }
+
+    switch (id2) {
+
+        case "art_pop":
 
             genero2 = art_pop;
+            
+        break;
+
+        case "atl_hip_hop":
+
+            genero2 = atl_hip_hop;
+            
+        break;
+
+        case "australian_pop":
+
+            genero2 = australian_pop;
+            
+        break;
+
+        case "big_room":
+
+            genero2 = big_room;
+            
+        break;
+
+        case "boy_band":
+
+            genero2 = boy_band;
+            
+        break;
+
+        case "canadian_pop":
+
+            genero2 = canadian_pop;
+            
+        break;
+
+        case "dance_pop":
+
+            genero2 = dance_pop;
+            
+        break;
+
+        case "electropop":
+
+            genero2 = electropop;
+            
+        break;
+
+        case "pop":
+
+            genero2 = pop;
             
         break;
     
@@ -15,25 +130,24 @@ function pearson(data) {
         break;
     }
     
+    console.log(genero1);
+    console.log(genero2);
 
     let dadop = null;
-    let dadog = null;
     let xy = null;
     let y2 = null;
 
     if(genero1.length < genero2.length){
         dadop = genero1;
-        dadog = genero2;
     }else{
         dadop = genero2;
-        dadog = genero1;
     }
 
     for (let i = 0; i < dadop.length; i++) {
 
-        xy += dadop[i]['popularidade'] * dadog[i]['popularidade']
+        xy += genero1[i]['popularidade'] * genero2[i]['popularidade']
 
-        y2 += dadog[i]['popularidade'] * dadog[i]['popularidade']
+        y2 += genero2[i]['popularidade'] * genero2[i]['popularidade']
 
     }
 
@@ -50,7 +164,7 @@ function pearson(data) {
 
     console.log(correlacao);
 
-    alert("Correlação de pop com art pop", correlacao)
+    alert("Correlação de "+ id + " com " + id2 + ": " + correlacao.toFixed(2))
 
 }
 
